@@ -1,3 +1,14 @@
+import os
+import streamlit as st
+
+# 先尝试从 Streamlit secrets 读取（云端），失败则从 .env 读取（本地）
+try:
+    api_key = st.secrets["DASHSCOPE_API_KEY"]
+    os.environ["DASHSCOPE_API_KEY"] = api_key
+except (FileNotFoundError, KeyError):
+    from dotenv import load_dotenv
+    load_dotenv()   # 读取本地的 .env 文件
+
 # -*- coding: utf-8 -*-
 import streamlit as st
 from dotenv import load_dotenv

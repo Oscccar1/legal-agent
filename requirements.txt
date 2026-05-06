@@ -7,4 +7,4 @@ dashscope>=1.14.0
 python-dotenv>=1.0.0
 pypdf>=4.0.0
 faiss-cpu>=1.8.0
-langchain-text-splitters>=0.3.0
+langchain-text-splitters>=0.3.0,<0.4.0   # 新增，解决 RecursiveCharacterTextSplitter 问题
