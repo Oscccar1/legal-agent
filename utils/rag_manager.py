@@ -2,7 +2,7 @@ import os, tempfile
 from langchain_community.document_loaders import PyPDFLoader, TextLoader
 from langchain_community.embeddings import DashScopeEmbeddings
 from langchain_community.vectorstores import FAISS
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.tools import tool
 
 KB_CACHE_DIR = "./knowledge_base_cache"
